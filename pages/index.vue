@@ -1,15 +1,16 @@
 <template>
-    <div class="container">
+    <div>
         <HomeSectionPromo
-			:payload="payloadHome.section_contact"
+			:head="payloadHome.section_head"
+			:headerButton="payloadHome.section_contact.button"
 		/>
 
-        <HomeSectionCredentials
-			:payload="payloadHome.section_contact"
+        <HomeSectionReferenzen
+			:referenzen="payloadHome.section_referenzen"
 		/>
 
         <HomeSectionBenefits
-			:payload="payloadHome.section_contact"
+			:vorteiles="payloadHome.section_vorteile"
 		/>
     </div>
 </template>
