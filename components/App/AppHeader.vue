@@ -3,13 +3,16 @@
         <b-container fluid>
             <b-navbar class="p-0 py-2">
                 <b-navbar-brand href="#">
-                    <AppLogo :path="logo" />
+                    <AppLogo :path="payload.section_head.image.url" />
                 </b-navbar-brand>
 
 				<b-navbar class="ml-auto">
-					<AppMainMenu :list="list" />
+					<AppMainMenu :list="payload.section_head.navigationList" />
 
-					<AppButton :text="buttonText" />
+					<AppButton
+						:text="payload.section_contact.button"
+						type="thin"
+					/>
 				</b-navbar>
             </b-navbar>
         </b-container>
@@ -19,19 +22,9 @@
 <script>
 export default {
     props: {
-		logo: {
-			type: String,
-			default: '',
-		},
-
-		list: {
-			type: Array,
-			default: () => [],
-		},
-
-		buttonText: {
-			type: String,
-			default: '',
+		payload: {
+			type: Object,
+			default: () => {},
 		},
 	},
 }

@@ -1,26 +1,24 @@
 <template>
     <section
         class="HomeSectionPromo d-flex justify-content-center align-items-center"
-        :style="{ 'background-image': 'url(' + head.background_image.url + ')' }"
+        :style="{ 'background-image': 'url(' + payload.section_head.background_image.url + ')' }"
     >
         <b-container>
             <AppLogo
 				class="d-flex justify-content-center"
-                :path="head.image.url"
+                :path="payload.section_head.image.url"
             />
 
             <AppPromoTitle
-                :title="head.title"
-                :subtitle="head.subtitle"
+                :title="payload.section_head.title"
+                :subtitle="payload.section_head.subtitle"
             />
 
             <div class="d-flex justify-content-center top-40">
-                <AppButton
-                    :text="head.button_1"
-                />
+                <AppButton :text="payload.section_head.button_1" />
 
                 <AppButton
-                    :text="head.button_2"
+                    :text="payload.section_head.button_2"
 					color="blue"
                 />
             </div>
@@ -31,14 +29,9 @@
 <script>
 export default {
     props: {
-		head: {
-			type: String,
-			default: '',
-		},
-
-		headerButton: {
-			type: String,
-			default: '',
+		payload: {
+			type: Object,
+			default: () => {},
 		},
 	},
 }

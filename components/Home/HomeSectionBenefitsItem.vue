@@ -1,11 +1,11 @@
 <template>
-    <div class="HomeBenefitsItem">
+    <div class="HomeSectionBenefitsItem">
 		<div class="d-flex align-items-center justify-content-start">
-			<h4 class="HomeBenefitsItem__number">
+			<h4 class="HomeSectionBenefitsItem__number">
 				{{ index + 1 }}
 			</h4>
 
-			<div class="HomeBenefitsItem__icon">
+			<div class="HomeSectionBenefitsItem__icon">
 				<b-img
 					:src="item.image.url"
 					alt="Icon"
@@ -13,11 +13,11 @@
 			</div>
 		</div>
 
-		<h3 class="HomeBenefitsItem__title text-left">
+		<h3 class="HomeSectionBenefitsItem__title text-left">
 			{{ item.title }}
 		</h3>
 
-		<p class="HomeBenefitsItem__text text-left">
+		<p class="HomeSectionBenefitsItem__text text-left">
 			{{ item.description }}
 		</p>
     </div>
@@ -42,7 +42,7 @@ export default {
 <style lang="scss" scoped>
 	@import "~/assets/styles/common/variables.scss";
 
-	.HomeBenefitsItem {
+	.HomeSectionBenefitsItem {
 		&__number {
 			font-family: $font-primary;
 			font-size: 80px;

@@ -2,11 +2,11 @@
     <section class="section HomeSectionReferenzen">
         <b-container>
             <AppSectionTitle
-                :title="referenzens.title"
-                :text="referenzens.subtitle"
+                :title="payload.section_referenzen.title"
+                :text="payload.section_referenzen.subtitle"
             />
 
-			<HomeReferenzenSwiper :referenzen="referenzens.referenzen" />
+			<HomeSectionReferenzenSwiper :referenzen="payload.section_referenzen.referenzen" />
         </b-container>
     </section>
 </template>
@@ -14,9 +14,9 @@
 <script>
 export default {
     props: {
-		referenzens: {
-			type: Array,
-			default: () => [],
+		payload: {
+			type: Object,
+			default: () => {},
 		},
 	}
 }

@@ -1,5 +1,5 @@
 <template>
-	<section class="section HomeReferenzenSwiper">
+	<section class="section HomeSectionReferenzenSwiper">
 		<swiper
 			ref="mySwiperRef"
 			class="swiper"
@@ -13,7 +13,7 @@
 				v-for="(item, index) in referenzen"
 				:key="index"
 			>
-				<HomeReferenzenSwiperItem :item="item" />
+				<HomeSectionReferenzenSwiperItem :item="item" />
 			</swiper-slide>
 		</swiper>
 
@@ -45,8 +45,8 @@
 export default {
 	props: {
 		referenzen: {
-			type: Array,
-			default: () => [],
+			type: Object,
+			default: () => {},
 		},
 	},
 

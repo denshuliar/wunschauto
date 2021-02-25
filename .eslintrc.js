@@ -17,6 +17,7 @@ module.exports = {
   rules: {
     indent: 'off',
 	'no-tabs': 'off',
+	'vue/attribute-hyphenation': 'off',
     'vue/html-indent': 'off',
 	'vue/no-v-html': 'off',
     'comma-dangle': 'off',

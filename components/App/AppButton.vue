@@ -3,6 +3,7 @@
 		class="AppButton"
 		:class="[
 			`AppButton--${color}`,
+			`AppButton--${type}`,
 		]"
 	>
 		<span>{{ text }}</span>
@@ -15,6 +16,11 @@ export default {
 		text: {
 			type: String,
 			default: '',
+		},
+
+		type: {
+			type: String,
+			default: 'common',
 		},
 
 		color: {
@@ -32,7 +38,6 @@ export default {
 		color: $white;
 		font-family: $font-primary;
 		position: relative;
-		margin: 0 15px;
 		padding: 18px 60px;
 		text-align: center;
 		text-transform: uppercase;
@@ -73,6 +78,16 @@ export default {
 
 		&--blue:hover {
 			background-color: $navy;
+		}
+
+		&--thin {
+			margin: 0;
+			text-transform: capitalize;
+		}
+
+		&--common {
+			margin: 0 15px;
+			text-transform: uppercase;
 		}
 	}
 </style>

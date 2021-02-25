@@ -1,23 +1,10 @@
 <template>
     <div>
-		<AppHeader
-			:logo="payloadHome.section_head.image.url"
-			:list="payloadHome.section_head.navigationList"
-			:button-text="payloadHome.section_contact.button"
-		/>
+		<AppHeader :payload="payloadHome" />
 
-        <HomeSectionPromo
-			:head="payloadHome.section_head"
-			:header-button="payloadHome.section_contact.button"
-		/>
-
-        <HomeSectionReferenzen
-			:referenzens="payloadHome.section_referenzen"
-		/>
-
-        <HomeSectionBenefits
-			:vorteiles="payloadHome.section_vorteile"
-		/>
+        <HomeSectionPromo :payload="payloadHome" />
+        <HomeSectionReferenzen :payload="payloadHome" />
+        <HomeSectionBenefits :payload="payloadHome" />
     </div>
 </template>
 
@@ -31,16 +18,8 @@ export default {
 
 	computed: {
 		...mapGetters({
-			payloadHome: 'payload-home/payloadHome'
+			payloadHome: 'payload-home/payloadHome',
 		})
 	},
-
-	created () {
-		console.log(this.payloadHome)
-	}
 }
 </script>
-
-<style lang="scss" scoped>
-
-</style>

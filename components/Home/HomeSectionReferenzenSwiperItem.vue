@@ -1,25 +1,25 @@
 <template>
-	<div class="HomeReferenzenSwiperItem p-4">
-		<div class="HomeReferenzenSwiperItem__img">
+	<div class="HomeSectionReferenzenSwiperItem p-4">
+		<div class="HomeSectionReferenzenSwiperItem__img">
 			<b-img
 				:src="item.image.url"
 				alt="Cars"
 			/>
 		</div>
 
-		<p class="HomeReferenzenSwiperItem__price">
+		<p class="HomeSectionReferenzenSwiperItem__price">
 			{{ item.price }}
 		</p>
 
-		<p class="HomeReferenzenSwiperItem__model">
+		<p class="HomeSectionReferenzenSwiperItem__model">
 			{{ item.title }}
 		</p>
 
-		<p class="HomeReferenzenSwiperItem__text">
+		<p class="HomeSectionReferenzenSwiperItem__text">
 			{{ item.description }}
 		</p>
 
-		<p class="HomeReferenzenSwiperItem__client">
+		<p class="HomeSectionReferenzenSwiperItem__client">
 			{{ item.subtitle }}
 		</p>
 	</div>
@@ -39,12 +39,12 @@ export default {
 <style lang="scss" scoped>
 	@import "~/assets/styles/common/variables.scss";
 
-	.HomeReferenzenSwiperItem {
+	.HomeSectionReferenzenSwiperItem {
 		box-shadow: 0 10px 40px 0 rgba(24, 37, 64, 10%);
 		border-radius: 5px;
 	}
 
-	.HomeReferenzenSwiperItem {
+	.HomeSectionReferenzenSwiperItem {
 		&__img {
 			max-width: 140px;
 			max-height: 140px;

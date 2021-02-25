@@ -2,18 +2,18 @@
     <section class="section HomeSectionBenefits">
         <AppSectionTitle
             color="light"
-            :subtitle="vorteiles.subtitle"
-            :title="vorteiles.title"
+            :subtitle="payload.section_vorteile.subtitle"
+            :title="payload.section_vorteile.title"
         />
 
         <b-container>
             <b-row>
                 <b-col
-                    v-for="(vorteileItem, index) in vorteiles.vorteile"
+                    v-for="(item, index) in payload.section_vorteile.vorteile"
                     :key="index"
                 >
-                    <HomeBenefitsItem
-                        :item="vorteileItem"
+                    <HomeSectionBenefitsItem
+                        :item="item"
 						:index="index"
                     />
                 </b-col>
@@ -25,9 +25,9 @@
 <script>
 export default {
 	props: {
-		vorteiles: {
-			type: Array,
-			default: () => [],
+		payload: {
+			type: Object,
+			default: () => {},
 		},
 	},
 }
