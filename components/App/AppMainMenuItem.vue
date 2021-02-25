@@ -14,9 +14,9 @@ export default {
 	props: {
 		item: {
 			type: Object,
-			default: () => {}
-		}
-	}
+			default: () => {},
+		},
+	},
 }
 </script>
 
@@ -25,8 +25,8 @@ export default {
 
 	.AppMainMenu {
 		&__item {
-			padding: 0 25px;
 			font-family: $font-primary;
+			padding: 0 25px;
 		}
 
 		&__link {

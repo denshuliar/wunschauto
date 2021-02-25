@@ -6,7 +6,10 @@
 			</h4>
 
 			<div class="HomeBenefitsItem__icon">
-				<b-img :src="item.image.url" alt="Icon" />
+				<b-img
+					:src="item.image.url"
+					alt="Icon"
+				/>
 			</div>
 		</div>
 
@@ -25,14 +28,14 @@ export default {
 	props: {
 		item: {
 			type: Object,
-			default: () => {}
+			default: () => {},
 		},
 
 		index: {
 			type: Number,
-			default: null
-		}
-	}
+			default: null,
+		},
+	},
 }
 </script>
 
@@ -50,7 +53,6 @@ export default {
 
 		&__title {
 			color: $white;
-
 			font-family: $font-secondary;
 			font-weight: 500;
 			font-size: 26px;

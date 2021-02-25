@@ -1,17 +1,11 @@
 <template>
-    <header
+    <section
         class="HomeSectionPromo d-flex justify-content-center align-items-center"
         :style="{ 'background-image': 'url(' + head.background_image.url + ')' }"
     >
-		<AppHeader
-			:logo="head.image.url"
-			:list="head.navigationList"
-			:button-text="headerButton"
-		/>
-
         <b-container>
             <AppLogo
-            class="d-flex justify-content-center"
+				class="d-flex justify-content-center"
                 :path="head.image.url"
             />
 
@@ -31,7 +25,7 @@
                 />
             </div>
         </b-container>
-    </header>
+    </section>
 </template>
 
 <script>
@@ -39,14 +33,14 @@ export default {
     props: {
 		head: {
 			type: String,
-			default: ''
+			default: '',
 		},
 
 		headerButton: {
 			type: String,
-			default: ''
-		}
-	}
+			default: '',
+		},
+	},
 }
 
 </script>

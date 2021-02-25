@@ -1,15 +1,20 @@
 <template>
 	<div class="HomeReferenzenSwiperItem p-4">
 		<div class="HomeReferenzenSwiperItem__img">
-			<b-img :src="item.image.url" alt="Cars" />
+			<b-img
+				:src="item.image.url"
+				alt="Cars"
+			/>
 		</div>
 
 		<p class="HomeReferenzenSwiperItem__price">
 			{{ item.price }}
 		</p>
+
 		<p class="HomeReferenzenSwiperItem__model">
 			{{ item.title }}
 		</p>
+
 		<p class="HomeReferenzenSwiperItem__text">
 			{{ item.description }}
 		</p>
@@ -25,8 +30,8 @@ export default {
 	props: {
 		item: {
 			type: Object,
-			default: () => {}
-		}
+			default: () => {},
+		},
 	},
 }
 </script>

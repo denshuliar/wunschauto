@@ -1,6 +1,10 @@
 <template>
     <div class="AppLogo">
-        <b-img :src="path" block alt="Logo" />
+        <b-img
+			:src="path"
+			block
+			alt="Logo"
+		/>
     </div>
 </template>
 
@@ -11,6 +15,6 @@ export default {
 			type: String,
 			default: '',
 		},
-	}
+	},
 }
 </script>

@@ -21,7 +21,7 @@ export default {
 			type: String,
 			default: 'red',
 		},
-	}
+	},
 }
 </script>
 
@@ -29,11 +29,11 @@ export default {
 	@import "~/assets/styles/common/variables.scss";
 
     .AppButton {
+		color: $white;
+		font-family: $font-primary;
 		position: relative;
 		margin: 0 15px;
 		padding: 18px 60px;
-		color: $white;
-		font-family: $font-primary;
 		text-align: center;
 		text-transform: uppercase;
 		overflow: hidden;
@@ -49,13 +49,13 @@ export default {
 			z-index: 1;
 
 			&::before {
+				background: $red-gradient-invert;
 				position: absolute;
 				content: "";
 				top: 0;
 				right: 0;
 				bottom: 0;
 				left: 0;
-				background: $red-gradient-invert;
 				z-index: -1;
 				transition: opacity .5s linear;
 				opacity: 0;

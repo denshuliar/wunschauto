@@ -1,10 +1,9 @@
 <template>
-	<section class="section HomeReferenzenSwiper" style="height: 1000px;">
+	<section class="section HomeReferenzenSwiper">
 		<swiper
-			v-if="showSwiper"
-			class="swiper"
 			ref="mySwiperRef"
-			:options="swiperOption"
+			class="swiper"
+			:options="swiperOptions"
 			:auto-update="true"
 			:auto-destroy="true"
 			:delete-instance-on-destroy="true"
@@ -18,12 +17,26 @@
 			</swiper-slide>
 		</swiper>
 
-		<button class="swiper-button-next" @click="swipeNext">
-			<b-img src="~/assets/images/arrow-right.svg" fluid alt="Logo" />
+		<button
+			class="swiper-button-prev"
+			@click="swipePrevSlide"
+		>
+			<b-img
+				src="~/assets/images/arrow-left.svg"
+				fluid
+				alt="Logo"
+			/>
 		</button>
 
-		<button class="swiper-button-prev" @click="swipePrev">
-			<b-img src="~/assets/images/arrow-left.svg" fluid alt="Logo" />
+		<button
+			class="swiper-button-next"
+			@click="swipeNextSlide"
+		>
+			<b-img
+				src="~/assets/images/arrow-right.svg"
+				fluid
+				alt="Logo"
+			/>
 		</button>
 	</section>
 </template>
@@ -39,27 +52,22 @@ export default {
 
 	data () {
 		return {
-			showSwiper: true,
-			swiperOption: {
+			swiperOptions: {
 				slidesPerView: 3,
 				loop: false,
 				spaceBetween: 20,
-			},
-			navigation: {
-				nextEl: '.swiper-button-next',
-				prevEl: '.swiper-button-prev',
 			},
 		}
 	},
 
 	methods: {
-		swipeNext () {
-			this.$refs.mySwiperRef.$swiper.slideNext()
+		swipePrevSlide () {
+			this.$refs.mySwiperRef.$swiper.slidePrev()
 		},
 
-		swipePrev () {
-			this.$refs.mySwiperRef.$swiper.slidePrev()
-		}
+		swipeNextSlide () {
+			this.$refs.mySwiperRef.$swiper.slideNext()
+		},
 	},
 }
 </script>

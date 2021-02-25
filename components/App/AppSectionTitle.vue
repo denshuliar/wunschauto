@@ -30,24 +30,24 @@ export default {
 	props: {
 		color: {
 			type: String,
-			default: 'dark'
+			default: 'dark',
 		},
 
 		title: {
 			type: String,
-			default: ''
+			default: '',
 		},
 
 		subtitle: {
 			type: String,
-			default: ''
+			default: '',
 		},
 
 		text: {
 			type: String,
-			default: ''
-		}
-	}
+			default: '',
+		},
+	},
 }
 </script>
 
@@ -56,14 +56,14 @@ export default {
 
 	.AppSectionTitle {
 		&__title {
-			padding: 20px 0 60px;
 			font-family: $font-secondary;
+			padding: 20px 0 60px;
 			font-size: 42px;
 		}
 
 		&__subtitle {
-			padding: 60px 0 0;
 			font-family: $font-third;
+			padding: 60px 0 0;
 			font-size: 18px;
 			font-weight: 600;
 		}
@@ -77,20 +77,25 @@ export default {
 			.AppSectionTitle__title {
 				color: $dark-navy;
 			}
+
 			.AppSectionTitle__subtitle {
 				color: $dark-navy;
 			}
+
 			.AppSectionTitle__text {
 				color: $dark-navy;
 			}
 		}
+
 		&--light {
 			.AppSectionTitle__title {
 				color: $white;
 			}
+
 			.AppSectionTitle__subtitle {
 				color: $white;
 			}
+
 			.AppSectionTitle__text {
 				color: $white;
 			}

@@ -1,7 +1,5 @@
 <template>
-	<div
-		class="AppPromoTitle text-center"
-	>
+	<div class="AppPromoTitle text-center">
 		<h1
 			v-if="title"
 			class="AppPromoTitle__title"
@@ -21,13 +19,14 @@ export default {
 	props: {
 		title: {
 			type: String,
-			default: ''
+			default: '',
 		},
+
 		subtitle: {
 			type: String,
-			default: ''
-		}
-	}
+			default: '',
+		},
+	},
 }
 </script>
 

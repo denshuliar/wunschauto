@@ -1,5 +1,11 @@
 <template>
     <div>
+		<AppHeader
+			:logo="payloadHome.section_head.image.url"
+			:list="payloadHome.section_head.navigationList"
+			:button-text="payloadHome.section_contact.button"
+		/>
+
         <HomeSectionPromo
 			:head="payloadHome.section_head"
 			:header-button="payloadHome.section_contact.button"
