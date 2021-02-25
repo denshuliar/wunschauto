@@ -1,10 +1,10 @@
 <template>
 	<b-nav-item class="AppMainMenu__item">
 		<NuxtLink
-			:to="item.name"
 			class="AppMainMenu__link"
+			:to="item.title"
 		>
-			{{ item.name }}
+			{{ item.title }}
 		</NuxtLink>
 	</b-nav-item>
 </template>

@@ -61,30 +61,29 @@ export default {
 
 		&__price {
 			font-family: $font-secondary;
-			font-size: 26px;
-			padding-top: 20px;
 			color: $dark-navy;
+			padding-top: 20px;
+			font-size: 26px;
 		}
 
 		&__model {
-			color: $grey;
 			font-family: $font-primary;
+			color: $grey;
 			font-size: 17px;
 		}
 
 		&__text {
 			font-family: $font-primary;
-			font-size: 17px;
-			padding-top: 30px;
-			padding-bottom: 30px;
 			color: $dark-navy;
+			padding: 30px 0;
+			font-size: 17px;
 			line-height: 2;
 		}
 
 		&__client {
 			font-family: $font-primary;
-			font-size: 17px;
 			color: $red;
+			font-size: 17px;
 			font-weight: 600;
 		}
 	}

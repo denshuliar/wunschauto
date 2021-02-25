@@ -37,9 +37,9 @@ export default {
 		&__title {
 			color: $white;
 			font-family: $font-primary;
+			padding-top: 27px;
 			font-size: 37px;
 			font-style: italic;
-			padding-top: 27px;
 		}
 
 		&__subtitle {

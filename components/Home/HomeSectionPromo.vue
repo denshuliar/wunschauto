@@ -40,12 +40,11 @@ export default {
 
 <style lang="scss" scoped>
     .HomeSectionPromo {
-        background-repeat: no-repeat;
-        background-size: cover;
-        flex-direction: column;
-        background-position: 50%;
         width: 100%;
         height: 800px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50%;
         box-shadow: inset 0 0 0 2000px rgb(17 17 17 / 30%)
     }
 </style>

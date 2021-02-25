@@ -73,15 +73,19 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+	.swiper-container {
+		padding: 15px 0;
+	}
+
 	.swiper-button-prev {
 		position: absolute;
-		left: -50px;
-		z-index: 50000000;
 		top: 50%;
-		transform: translateY(-50%);
-		border: none;
+		left: -50px;
 		width: 30px;
 		height: 30px;
+		z-index: 50000000;
+		border: none;
+		transform: translateY(-50%);
 
 		img {
 			max-width: 100px;
@@ -95,12 +99,12 @@ export default {
 
 	.swiper-button-next {
 		position: absolute;
-		right: -50px;
 		top: 50%;
-		transform: translateY(-50%);
-		border: none;
+		right: -50px;
 		width: 30px;
 		height: 30px;
+		border: none;
+		transform: translateY(-50%);
 
 		img {
 			max-width: 100px;

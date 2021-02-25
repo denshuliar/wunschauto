@@ -7,10 +7,10 @@
                 </b-navbar-brand>
 
 				<b-navbar class="ml-auto">
-					<AppMainMenu :list="payload.section_head.navigationList" />
+					<AppMainMenu :list="payload.section_navbar.image.page_links" />
 
 					<AppButton
-						:text="payload.section_contact.button"
+						:text="payload.section_navbar.image.button"
 						type="thin"
 					/>
 				</b-navbar>
@@ -33,11 +33,10 @@ export default {
 <style lang="scss" scoped>
     .AppHeader {
         position: absolute;
-        top: 0;
+        top: 15px;
         left: 0;
         width: 100%;
 		padding: 0 7%;
         border-bottom: 1px solid rgba(255, 255, 255, .5);
-        top: 15px;
     }
 </style>

@@ -1,9 +1,13 @@
 <template>
     <div>
-		<AppHeader :payload="payloadHome" />
+		<AppHeader :payload="allPayloads" />
 
         <HomeSectionPromo :payload="payloadHome" />
-        <HomeSectionReferenzen :payload="payloadHome" />
+
+        <ClientOnly>
+			<HomeSectionReferenzen :payload="payloadHome" />
+		</ClientOnly>
+
         <HomeSectionBenefits :payload="payloadHome" />
     </div>
 </template>
@@ -12,14 +16,18 @@
 import { mapGetters } from 'vuex'
 
 export default {
-	async asyncData ({ store }) {
-		await store.dispatch('payload-home/getPayloadHome')
-	},
-
 	computed: {
 		...mapGetters({
 			payloadHome: 'payload-home/payloadHome',
-		})
+			payloadShared: 'payload-shared/payloadShared',
+		}),
+
+		allPayloads () {
+			return {
+				...this.payloadHome,
+				...this.payloadShared
+			}
+		},
 	},
 }
 </script>
