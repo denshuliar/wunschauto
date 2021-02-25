@@ -1,11 +1,11 @@
 <template>
-	<ul class="AppMainMenu d-flex justify-content-around list--reset">
+	<b-nav class="AppMainMenu d-flex justify-content-around">
 		<AppMainMenuItem
 			v-for="(item, index) in list"
 			:key="index"
 			:item="item"
 		/>
-	</ul>
+	</b-nav>
 </template>
 
 <script>

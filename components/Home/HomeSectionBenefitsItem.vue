@@ -1,14 +1,15 @@
 <template>
-    <div class="HomeSectionBenefitsItem">
+    <b-card class="HomeSectionBenefitsItem">
 		<div class="d-flex align-items-center justify-content-start">
 			<h4 class="HomeSectionBenefitsItem__number">
 				{{ index + 1 }}
 			</h4>
 
 			<div class="HomeSectionBenefitsItem__icon">
-				<b-img
+				<b-avatar
 					:src="item.image.url"
 					alt="Icon"
+					size="90px"
 				/>
 			</div>
 		</div>
@@ -20,7 +21,7 @@
 		<p class="HomeSectionBenefitsItem__text text-left">
 			{{ item.description }}
 		</p>
-    </div>
+    </b-card>
 </template>
 
 <script>
@@ -41,6 +42,10 @@ export default {
 
 <style lang="scss" scoped>
 	@import "~/assets/styles/common/variables.scss";
+	.HomeSectionBenefitsItem {
+		border: none;
+		background: transparent;
+	}
 
 	.HomeSectionBenefitsItem {
 		&__number {

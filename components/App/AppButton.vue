@@ -1,5 +1,5 @@
 <template>
-	<button
+	<b-button
 		class="AppButton"
 		:class="[
 			`AppButton--${color}`,
@@ -7,7 +7,7 @@
 		]"
 	>
 		<span>{{ text }}</span>
-    </button>
+    </b-button>
 </template>
 
 <script>

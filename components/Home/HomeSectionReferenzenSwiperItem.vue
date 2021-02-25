@@ -1,9 +1,10 @@
 <template>
-	<div class="HomeSectionReferenzenSwiperItem p-4">
+	<b-card class="HomeSectionReferenzenSwiperItem p-4">
 		<div class="HomeSectionReferenzenSwiperItem__img">
-			<b-img
+			<b-avatar
 				:src="item.image.url"
 				alt="Cars"
+				size="140px"
 			/>
 		</div>
 
@@ -22,7 +23,7 @@
 		<p class="HomeSectionReferenzenSwiperItem__client">
 			{{ item.subtitle }}
 		</p>
-	</div>
+	</b-card>
 </template>
 
 <script>
@@ -42,6 +43,7 @@ export default {
 	.HomeSectionReferenzenSwiperItem {
 		box-shadow: 0 10px 40px 0 rgba(24, 37, 64, 10%);
 		border-radius: 5px;
+		border: none;
 	}
 
 	.HomeSectionReferenzenSwiperItem {

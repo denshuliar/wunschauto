@@ -1,12 +1,12 @@
 <template>
-	<li class="AppMainMenu__item">
+	<b-nav-item class="AppMainMenu__item">
 		<NuxtLink
 			:to="item.name"
 			class="AppMainMenu__link"
 		>
 			{{ item.name }}
 		</NuxtLink>
-	</li>
+	</b-nav-item>
 </template>
 
 <script>
@@ -41,5 +41,9 @@ export default {
 				text-decoration: none;
 			}
 		}
+	}
+
+	.nav-link {
+		padding: 0;
 	}
 </style>
