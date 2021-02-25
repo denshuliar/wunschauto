@@ -1,6 +1,6 @@
 <template>
 	<ul
-		class="AppMainMenu"
+		class="AppMainMenu d-flex justify-content-around list--reset"
 	>
 		<AppMainMenuItem
 			v-for="(item, index) in list"
@@ -20,10 +20,3 @@ export default {
 	}
 }
 </script>
-
-<style lang="scss" scoped>
-	.AppMainMenu {
-		display: flex;
-		justify-content: space-around;
-	}
-</style>

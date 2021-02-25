@@ -21,42 +21,25 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+	@import "~/assets/styles/common/variables.scss";
+
 	.AppMainMenu {
+		&__item {
+			padding: 0 25px;
+			font-family: $font-primary;
+		}
+
 		&__link {
-			font-size: 14px;
-			font-weight: 500;
+			font-size: 17px;
+			padding: 8px;
 			text-transform: uppercase;
-			letter-spacing: .2px;
 			transition: all .3s;
+			color: rgba(255, 255, 255, 0.5);
+
 			&:hover {
-				opacity: 0.6;
+				color: rgba(255, 255, 255, 0.7);
 				text-decoration: none;
 			}
-		}
-	}
-	.AppMainMenu--horizontal {
-		.AppMainMenu__item:not(:last-of-type) {
-			margin-right: 30px;
-		}
-	}
-	.AppMainMenu--light {
-		.AppMainMenu__link {
-			color: #FFFFFF;
-		}
-	}
-	.AppMainMenu--vertical {
-		.AppMainMenu__item:not(:last-of-type) {
-			margin-bottom: 14px;
-		}
-	}
-	.AppMainMenu--dark {
-		.AppMainMenu__link {
-			color: #0F294A;
-		}
-	}
-	.AppHeader__fixed, .AppHeader__dark {
-		.AppMainMenu__link {
-			color: #0F294A;
 		}
 	}
 </style>

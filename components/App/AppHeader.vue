@@ -1,18 +1,20 @@
-<template>
+ <template>
     <div class="AppHeader">
         <b-container>
             <b-navbar>
                 <b-navbar-brand href="#">
                     <AppLogo
-                        :path='logo'
+                        :path="logo"
                     />
                 </b-navbar-brand>
 
-                <AppMainMenu :list='list' />
+				<b-navbar class="ml-auto">
+					<AppMainMenu :list="list" />
 
-                <AppButton
-                    :text="buttonText"
-                />
+					<AppButton
+						:text="buttonText"
+					/>
+				</b-navbar>
             </b-navbar>
         </b-container>
     </div>
@@ -20,11 +22,22 @@
 
 <script>
 export default {
-    props: [
-        'logo',
-        'list',
-        'buttonText'
-    ]
+    props: {
+		logo: {
+			type: String,
+			default: '',
+		},
+
+		list: {
+			type: Array,
+			default: () => []
+		},
+
+		buttonText: {
+			type: String,
+			default: '',
+		},
+	}
 }
 </script>
 

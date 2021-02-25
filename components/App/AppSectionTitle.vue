@@ -6,9 +6,9 @@
 		]"
 	>
 		<p
-			v-if="text"
-			class="AppSectionTitle__text"
-			v-html="text"
+			v-if="subtitle"
+			class="AppSectionTitle__subtitle"
+			v-html="subtitle"
 		/>
 
 		<h3
@@ -18,9 +18,9 @@
 		/>
 
         <p
-            v-if="subtitle"
-            class="AppSectionTitle__subtitle"
-            v-html="subtitle"
+            v-if="text"
+            class="AppSectionTitle__text"
+            v-html="text"
         />
 	</div>
 </template>
@@ -52,46 +52,47 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-	.AppSectionTitle {
-		padding: 80px 0;
-	}
+	@import "~/assets/styles/common/variables.scss";
 
 	.AppSectionTitle {
 		&__title {
 			padding: 20px 0 60px;
-			font-family: Lora, serif !important;
+			font-family: $font-secondary;
 			font-size: 42px;
-			font-weight: 500;
-			color: #182540;
 		}
 
 		&__subtitle {
-			padding-bottom: 30px;
+			padding: 60px 0 0;
+			font-family: $font-third;
+			font-size: 18px;
+			font-weight: 600;
+		}
+
+		&__text {
 			font-size: 17px;
 			font-weight: 600;
-			color: #182540;
 		}
 
 		&--dark {
 			.AppSectionTitle__title {
-				color: #182540;
+				color: $dark-navy;
 			}
 			.AppSectionTitle__subtitle {
-				color: #182540;
+				color: $dark-navy;
 			}
 			.AppSectionTitle__text {
-				color: #182540;
+				color: $dark-navy;
 			}
 		}
 		&--light {
 			.AppSectionTitle__title {
-				color: #fff;
+				color: $white;
 			}
 			.AppSectionTitle__subtitle {
-				color: #fff;
+				color: $white;
 			}
 			.AppSectionTitle__text {
-				color: #fff;
+				color: $white;
 			}
 		}
 	}

@@ -2,11 +2,11 @@
     <div>
         <HomeSectionPromo
 			:head="payloadHome.section_head"
-			:headerButton="payloadHome.section_contact.button"
+			:header-button="payloadHome.section_contact.button"
 		/>
 
         <HomeSectionReferenzen
-			:referenzen="payloadHome.section_referenzen"
+			:referenzens="payloadHome.section_referenzen"
 		/>
 
         <HomeSectionBenefits
@@ -35,6 +35,6 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 
 </style>

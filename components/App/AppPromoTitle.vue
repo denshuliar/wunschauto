@@ -31,4 +31,22 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+	@import "~/assets/styles/common/variables.scss";
+
+	.AppPromoTitle {
+		&__title {
+			color: $white;
+			font-family: $font-primary;
+			font-size: 37px;
+			font-style: italic;
+			padding-top: 27px;
+		}
+
+		&__subtitle {
+			color: $white;
+			font-family: $font-primary;
+			font-size: 17px;
+		}
+	}
+</style>

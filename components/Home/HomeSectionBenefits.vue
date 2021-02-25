@@ -1,8 +1,8 @@
 <template>
-    <section class="HomeSectionBenefits">
+    <section class="section HomeSectionBenefits">
         <AppSectionTitle
             color="light"
-            :text="vorteiles.subtitle"
+            :subtitle="vorteiles.subtitle"
             :title="vorteiles.title"
         />
 
@@ -13,7 +13,8 @@
                     :key="index"
                 >
                     <HomeBenefitsItem
-                        :item='vorteileItem'
+                        :item="vorteileItem"
+						:index="index"
                     />
                 </b-col>
             </b-row>
@@ -23,14 +24,19 @@
 
 <script>
 export default {
-    props: [
-        'vorteiles'
-    ]
+	props: {
+		vorteiles: {
+			type: Array,
+			default: () => [],
+		},
+	},
 }
 </script>
 
 <style lang="scss" scoped>
+	@import "~/assets/styles/common/variables.scss";
+
     .HomeSectionBenefits {
-        background-color: #182540
+        background-color: $dark-navy
     }
 </style>

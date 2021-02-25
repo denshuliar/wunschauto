@@ -1,32 +1,33 @@
 <template>
     <header
-        class="HomeSectionPromo"
+        class="HomeSectionPromo d-flex justify-content-center align-items-center"
         :style="{ 'background-image': 'url(' + head.background_image.url + ')' }"
     >
 		<AppHeader
 			:logo="head.image.url"
 			:list="head.navigationList"
-			:buttonText="headerButton"
+			:button-text="headerButton"
 		/>
 
         <b-container>
             <AppLogo
             class="d-flex justify-content-center"
-                :path='head.image.url'
+                :path="head.image.url"
             />
 
             <AppPromoTitle
-                :title='head.title'
-                :subtitle='head.subtitle'
+                :title="head.title"
+                :subtitle="head.subtitle"
             />
 
-            <div class="d-flex justify-content-around">
+            <div class="d-flex justify-content-center top-40">
                 <AppButton
-                    :text='head.button_1'
+                    :text="head.button_1"
                 />
 
                 <AppButton
-                    :text='head.button_2'
+                    :text="head.button_2"
+					color="blue"
                 />
             </div>
         </b-container>
@@ -35,23 +36,23 @@
 
 <script>
 export default {
-    props: [
-		'head',
-		'headerButton'
-	],
+    props: {
+		head: {
+			type: String,
+			default: ''
+		},
 
-    created () {
-        console.log(this.headerButton)
-    }
+		headerButton: {
+			type: String,
+			default: ''
+		}
+	}
 }
 
 </script>
 
 <style lang="scss" scoped>
     .HomeSectionPromo {
-        display: flex;
-        justify-content: center;
-        align-items: center;
         background-repeat: no-repeat;
         background-size: cover;
         flex-direction: column;

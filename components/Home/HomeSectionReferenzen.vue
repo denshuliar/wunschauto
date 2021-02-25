@@ -1,20 +1,23 @@
 <template>
-    <section class="HomeSectionReferenzen">
+    <section class="section HomeSectionReferenzen">
         <b-container>
             <AppSectionTitle
-                :title="referenzen.title"
-                :subtitle="referenzen.subtitle"
+                :title="referenzens.title"
+                :text="referenzens.subtitle"
             />
+
+			<HomeReferenzenSwiper :referenzen="referenzens.referenzen" />
         </b-container>
     </section>
 </template>
 
 <script>
 export default {
-    props: [
-        'referenzen'
-    ]
+    props: {
+		referenzens: {
+			type: Array,
+			default: () => [],
+		},
+	}
 }
 </script>
-
-<style lang="scss" scoped></style>

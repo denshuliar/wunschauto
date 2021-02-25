@@ -1,17 +1,16 @@
 <template>
     <div class="AppLogo">
-        <b-img :src='path' block alt="Logo"></b-img>
+        <b-img :src="path" block alt="Logo" />
     </div>
 </template>
 
 <script>
 export default {
-    props: [
-        'path'
-    ]
+    props: {
+		path: {
+			type: String,
+			default: '',
+		},
+	}
 }
 </script>
-
-<style lang="scss" scoped>
-
-</style>
